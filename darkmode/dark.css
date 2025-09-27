@@ -1,0 +1,19 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+body.light {
+    background-color: white;
+    color: black;
+}
+
+body.dark {
+    background-color: black;
+    color: white;
+}
+
+.dark-mode-section {
+    display: flex;
+    justify-content: space-between;
+}
