@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: black;
+      color: white;
+      padding: 20px;
+      margin: 10px;
+      border: 4px solid yellowgreen;
+    }
+
+    .container {
+        /* columns: ; */
+        columns: 4;
+        column-width: 100px;
+    }
+
+    .image {
+        filter: brightness(0);
+        transition: filter 1s;
+        /* transition: all 0.4s; */
+    }
+    .image:hover {
+        filter: brightness(1)
+    }
+  </style>
+  <body>
+    <div class="box">Hi I am box</div>
+
+    <div class="container">
+      <p>
+        Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh
+        onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+      </p>
+
+      <p>
+        Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot
+        courgette tatsoi pea sprouts fava bean collard greens dandelion okra
+        wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.
+      </p>
+
+      <p>
+        Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+        kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
+        winter purslane kale. Celery potato scallion desert raisin horseradish
+        spinach carrot soko.
+      </p>
+    </div>
+
+
+    <img class="image" src="https://static.vecteezy.com/system/resources/thumbnails/036/324/708/small/ai-generated-picture-of-a-tiger-walking-in-the-forest-photo.jpg" alt="" style="width: 100%; height: 100%;">
+  </body>
+</html>

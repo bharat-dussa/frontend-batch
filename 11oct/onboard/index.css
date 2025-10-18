@@ -1,0 +1,45 @@
+/* Mobile css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.card {
+  background: #f8deaf;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 10%; 
+  padding-bottom: 2%; 
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  flex-basis: 100%;
+}
+
+.nextButton {
+    border: none;
+    background: black;
+    color: white;
+    padding-top: 6%;
+    padding-bottom: 6%;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.content {
+    text-align: center;
+}
+.content_tags {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.heading {
+    font-weight: 900;
+    font-size: 25px;
+}
+.explore_p {
+    color: #6B6B6B;
+}
