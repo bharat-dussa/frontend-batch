@@ -1,0 +1,78 @@
+/* Reset css */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    --bg: #0f172a;
+    --primary-color: #22d3ee;
+    --burger-line:rgb(20, 20, 20);
+}
+
+.logo {
+    color: var(--primary-color);
+}
+
+.topbar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.hamburger {
+    width: 44px;
+    height:44px;
+    border-radius:12px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.hamburger:hover{background:rgba(255,255,255,.06)}
+.lines {
+    width: 22px;
+    height: 44px;
+    position: relative;
+   
+}
+.line {
+    position: absolute;
+    height: 2px;
+    left: 0;
+    right: 0;
+    background-color: var(--burger-line);
+    border-radius: 4px;
+    transition: transform .4s, opacity .4s, top .4s;
+}
+
+
+.line:nth-child(1) {
+    top: 0;
+}
+
+.line:nth-child(2) {
+    top: 8px;
+}
+
+.line:nth-child(3) {
+    top: 16px;
+}
+
+
+
+.lines:hover .line:nth-child(1) {
+    top: 8px;
+    transform: rotate(90deg)
+}
+
+.lines:hover  .line:nth-child(2) {
+    opacity: 0
+}
+.lines:hover .line:nth-child(3) {
+    top: 8px;
+    transform: rotate(-180deg)
+}

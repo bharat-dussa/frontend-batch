@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Animated Sidebar Navbar</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div class="topbar" aria-label="Top navigation bar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <span>NovaUI</span>
+      </div>
+
+      <nav class="top-links" aria-label="Primary">
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#docs">Docs</a>
+      </nav>
+
+      <button
+        id="burger"
+        class="burger"
+        aria-label="Open menu"
+        aria-controls="sidebar"
+        aria-expanded="false"
+      >
+        <div class="lines" aria-hidden="true">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+      </button>
+    </div>
+
+    <div id="overlay" class="overlay" tabindex="-1" aria-hidden="true"></div> 
+
+    <aside
+      id="sidebar"
+      class="sidebar"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Sidebar navigation"
+      aria-hidden="true"
+    >
+      <header>
+        <span class="title">Navigation</span>
+        <button id="closeBtn" class="burger" aria-label="Close menu">
+          <div class="lines">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </div>
+        </button>
+      </header>
+
+      <div class="search">
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path
+            d="M21 21l-4.3-4.3M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+          />
+        </svg>
+        <input id="search" type="text" placeholder="Search…" />
+      </div>
+
+      <nav aria-label="Sidebar">
+        <ul>
+          <li>
+            <a href="#home"><span class="dot"></span> Home</a>
+          </li>
+          <li>
+            <a href="#features"><span class="dot"></span> Features</a>
+          </li>
+          <li>
+            <a href="#pricing"><span class="dot"></span> Pricing</a>
+          </li>
+          <li>
+            <a href="#docs"><span class="dot"></span> Docs</a>
+          </li>
+          <li>
+            <a href="#contact"><span class="dot"></span> Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="hero">
+      <h1
+        style="
+          font-size: clamp(28px, 4vw, 48px);
+          line-height: 1.1;
+          margin: 0 0 8px;
+        "
+      >
+        Sleek sidebar navigation with buttery animations
+      </h1>
+      <p class="muted" style="color: var(--muted); max-width: 60ch">
+        This is a minimal, accessible slide‑in menu that works with plain HTML,
+        CSS, and a tiny bit of JavaScript. It handles overlay clicks, ESC to
+        close, focus management, and respects reduced‑motion users.
+      </p>
+      <div class="card">
+        <div class="pill">Tip</div>
+        Drop this file in your project and customize links, colors, or sizes.
+        The JS is framework‑agnostic and uses simple functions only.
+      </div>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
