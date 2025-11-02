@@ -1,3 +1,13 @@
+:root {
+  --background-color: #f3f2ec;
+  --font-main: "Cal Sans", sans-serif;
+  --font-main-weight: 400;
+  --font-main-style: normal;
+  --f-sm: 0.8rem;
+  --f-normal: 1rem;
+  --f-lg: ;
+}
+
 *,
 *::before,
 *::after {
@@ -5,46 +15,96 @@
   padding: 0;
 }
 
-.box {
-  height: 100px;
-  width: 100px;
-  background-color: crimson;
+body {
+  background-color: var(--background-color);
+  font-family: var(--font-main);
+  font-weight: var(--font-main-weight);
+  font-style: var(--font-main-style);
+  /* overflow: hidden; */
+  /* letter-spacing: 2px; */
+}
+.section_1 {
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
 }
 
-.box1 {
-  height: 100px;
-  width: 100px;
-  background-color: crimson;
+.section_1 h1 {
+  font-size: clamp(2rem, 30vw, 15rem);
 }
 
-.box2 {
-  height: 100px;
-  width: 100px;
-  background-color: yellow;
+.role {
+  opacity: 0;
+  font-size: clamp(1vw, 4vw, 12vw);
 }
 
+.developer {
+  opacity: 0;
+  position: relative;
+  display: inline-block;
+}
+
+.slash {
+  position: absolute;
+  left: 0;
+  top: 60%;
+  height: clamp(2px,2px,4px);
+  background: red;
+  /* transform: rotate(-15deg); */
+  transform-origin: left center;
+  z-index: 999;
+}
+
+.engineer {
+  display: inline-block;
+  margin-left: 10px;
+  opacity: 0;
+  transform: translateY(10px);
+  color: #3C467B;
+}
 
 .fullpage {
-  width: 100%;
-  height: 100vh;
-  background-color: blue;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
-.fullpage1 {
-  width: 100%;
-  height: 100vh;
-  background-color: violet;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.fullpage .main_article {
+  text-align: center;
+  font-size: 20vw;
+  text-transform: uppercase;
 }
-.fullpage2 {
-  width: 100%;
+
+
+
+
+#main {
   height: 100vh;
-  background-color: green;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  overflow: hidden;
+}
+
+#cursor img {
+  border-radius: 20px;
+}
+#cursor{ 
+  /* width: 50px; */
+  /* background-color: black; */
+  color: white;
+  padding: 10px;
+  border-radius: 10%;
+}
+
+.pos1 {
+  position: absolute;
+  top: 40%;
+}
+
+.pos2 {
+  position: absolute;
+  right: 10%;
+}
+
+.pos3 {
+  position: absolute;
+  top: 20%;
 }

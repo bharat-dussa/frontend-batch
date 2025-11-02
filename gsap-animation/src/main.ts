@@ -1,58 +1,55 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { generateCursor } from "./cursor";
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.from(".box1", {
-  x: 1200,
-  duration: 2,
-  delay: 1,
-  backgroundColor: "blue",
-  rotate: 360,
-  borderRadius: 50,
-});
+generateCursor();
 
-// gsap.from(".h1", {
-//   opacity: 0,
-//   duration: 2,
-//   delay: 2,
-//   y: 20,
-//   stagger: 1
-// });
+const tl = gsap.timeline({ delay: 1 });
 
-gsap.from(".fullpage .box", {
-  scale: 0,
-  delay: 1,
-  duration: 2,
-  rotate: 360,
-  scrollTrigger: {
-    trigger:  ".fullpage .box",
-    scrub: true,
-    markers: true,
-  }
-});
-
-gsap.from(".fullpage1 .box1", {
-  scale: 0,
-  delay: 1,
-  duration: 2,
-  rotate: 360,
-  scrollTrigger: {
-    trigger:  ".fullpage1 .box1",
-    scrub: 3,
-    markers: true,
-    start: "top 50%",
-    pin: true,
-  }
-
-});
-
-gsap.from(".fullpage2 .box2", {
-  y: window.screen.height,
-  duration: 1,
-  scrollTrigger: {
-    trigger: ".fullpage2 .box2",
-    scroller: 'body',
-    markers: true,
-    scrub: 5,
-  },
-});
+tl.from(".section_1 h1", {
+  opacity: 0,
+  stagger: 0.9,
+})
+  .from(".fullpage .main_article", {
+    transform: "translate(100%)",
+    delay: 0.3,
+    fontStyle: "oblique",
+    duration: 2,
+    scrollTrigger: {
+      trigger: ".fullpage .main_article",
+      scroller: "body",
+      scrub: 2,
+    },
+  })
+  .to(".role", {
+    opacity: 1,
+  })
+  .to(".developer", {
+    opacity: 1,
+  })
+  .to(".slash", {
+    width: "100%",
+    duration: 1,
+    ease: "power2.inOut",
+  })
+  .to(
+    ".developer",
+    {
+      color: "#B6AE9F",
+      opacity: 0.5,
+      duration: 1,
+    },
+    "-=0.2"
+  )
+  .to(
+    ".engineer",
+    {
+      opacity: 1,
+      y: 0,
+      duration: 0.6,
+      ease: "power2.out",
+      textTransform: "capitalize",
+    },
+    "-=0.1"
+  );
